@@ -19,7 +19,7 @@
 
     var concatBuf = new Buffer(length), index = 0;
     bufsToConcat.forEach(function (buf) {
-      buf.copy(concatBuf, index, 0, buf.length);
+      buf.copy(concatBuf, index);
       index += buf.length;
     });
 
